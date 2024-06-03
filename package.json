@@ -1,5 +1,5 @@
 {
-  "name": "auto-release-changelog",
+  "name": "release-changelog",
   "version": "1.1.0",
   "private": true,
   "description": "Generate automatic releases on new tag push",
@@ -28,7 +28,7 @@
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0",
     "conventional-changelog-angular": "^5.0.13",
-    "conventional-commits-parser": "^3.2.4",
+    "conventional-commits-parser": "^5.0.0",
     "globby": "13.1.1",
     "semver": "^7.3.5",
     "terser-webpack-plugin": "5.3.1",
