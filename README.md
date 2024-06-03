@@ -12,7 +12,7 @@ Requires use of [semantic versioning](https://semver.org/) on tags
   run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
 
 - name: Create release
-  uses: mrwake-dev/release-changelog@v2.0.0
+  uses: mrwake-dev/release-changelog@v2.0.2
   with:
     token: ${{ secrets.GITHUB_TOKEN }}
     title: 'YOUR APP NAME ${{ steps.vars.outputs.tag }}'
