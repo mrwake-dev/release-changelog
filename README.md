@@ -1,13 +1,26 @@
-<p align="center">
-    <a href="https://github.com/MC-Machinations/auto-release-changelog/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/MC-Machinations/auto-release-changelog"></a>
-</p>
-
-# auto-release-changelog
+# release-changelog
 
 Based on [automatic-releases](https://github.com/marvinpinto/actions/blob/master/packages/automatic-releases) with further changelog customizations.  
 Requires use of [semantic versioning](https://semver.org/) on tags
 
-## arguments
+> Required NodeJS in GitHub Action >=20
+
+## Usage
+```yaml
+- name: Set tag name output
+  id: vars
+  run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+
+- name: Create release
+  uses: mrwake-dev/release-changelog@v2.0.0
+  with:
+    token: ${{ secrets.GITHUB_TOKEN }}
+    title: 'YOUR APP NAME ${{ steps.vars.outputs.tag }}'
+    files: |
+      LICENSE
+```
+
+## Arguments
 ```yaml
   token:
     required: true
