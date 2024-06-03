@@ -132,7 +132,7 @@ export const generateChangelogFromParsedCommits = (parsedCommits: ParsedCommits[
 
     for (const key of Object.keys(ConventionalCommitTypes)) {
         const clBlock = parsedCommits
-            .filter((val) => val.type === key)
+            .filter((val) => val.type.toLocaleLowerCase() === key.toLocaleLowerCase())
             .map((val) => getFormattedChangelogEntry(val))
             .reduce((acc, line) => `${acc}\n${line}`, '');
         if (clBlock) {
