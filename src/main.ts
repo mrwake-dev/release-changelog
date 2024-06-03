@@ -1,19 +1,19 @@
 import * as core from "@actions/core";
 import * as github from "@actions/github";
-import {Context} from "@actions/github/lib/context"
+import { Context } from "@actions/github/lib/context"
 // @ts-ignore
-import {sync as commitParser} from "conventional-commits-parser"
-import {octokitLogger, parseGitTagRef} from "./utils"
-import {GitHub} from "@actions/github/lib/utils"
-import {components} from "@octokit/openapi-types"
+import { sync as commitParser } from "conventional-commits-parser"
+import { octokitLogger, parseGitTagRef } from "./utils"
+import { GitHub } from "@actions/github/lib/utils"
+import { components } from "@octokit/openapi-types"
 import semverValid from "semver/functions/valid"
 import semverRcompare from "semver/functions/rcompare"
 import semverLt from "semver/functions/lt"
 import semverDiff from "semver/functions/diff"
 import semverPrerelease from "semver/functions/prerelease"
-import {generateChangelogFromParsedCommits, getChangelogOptions, isBreakingChange, ParsedCommits} from "./changelog"
-import {getClosedIssues} from "./graphql"
-import globby from "globby"
+import { generateChangelogFromParsedCommits, getChangelogOptions, isBreakingChange, ParsedCommits } from "./changelog"
+import { getClosedIssues } from "./graphql"
+import { globby } from 'globby';
 import path from "path"
 const fs = require("fs")
 

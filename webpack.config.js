@@ -33,12 +33,10 @@ module.exports = {
                     output: {
                         comments: false,
                     },
+                    sourceMap: true,
                 },
-                sourceMap: true,
                 extractComments: false,
             }),
         ],
     },
-
-    plugins: [new webpack.IgnorePlugin(/\/iconv-loader$/)],
 }
