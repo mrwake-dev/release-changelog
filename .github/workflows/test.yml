@@ -8,13 +8,17 @@ jobs:
   release: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: 'package.json'
       - name: Set tag name output
         id: vars
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
       - uses: ./
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: auto-release-changelog ${{ steps.vars.outputs.tag }}
+          title: release-changelog ${{ steps.vars.outputs.tag }}
           files: |
             LICENSE
