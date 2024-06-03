@@ -23,6 +23,8 @@ type ParsedCommitsExtra = {
 
 enum ConventionalCommitTypes {
     feat = ':rocket: Features',
+    new = ':rocket: Features',
+    update = ':arrows_counterclockwise: Updates',
     fix = ':wrench: Bug Fixes',
     docs = ':book: Documentation',
     style = ':crown: Styles',
@@ -33,6 +35,11 @@ enum ConventionalCommitTypes {
     ci = ':repeat: Continuous Integration',
     chore = ':broom: Chores',
     revert = ':leftwards_arrow_with_hook: Reverts',
+    remove = ':fire: Removals',
+    security = ':lock: Security',
+    breaking = ':bomb: Breaking Changes',
+    other = ':label: Other Changes',
+    unknown = ':question: Unknown',
 }
 
 export type ParsedCommits = {
