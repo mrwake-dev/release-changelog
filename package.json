@@ -19,6 +19,11 @@
   ],
   "author": "Machine_Maker",
   "license": "MIT",
+  "engineStrict": true,
+  "engines": {
+    "node": "20",
+    "npm": "10"
+  },
   "dependencies": {
     "@actions/core": "^1.6.0",
     "@actions/github": "^5.0.0",
