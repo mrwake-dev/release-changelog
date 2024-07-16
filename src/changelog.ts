@@ -26,10 +26,10 @@ enum ConventionalCommitTypes {
     new = ':rocket: Features',
     update = ':arrows_counterclockwise: Updates',
     fix = ':wrench: Bug Fixes',
-    docs = ':book: Documentation',
-    style = ':crown: Styles',
+    docs = ':memo: Documentation',
+    style = ':art: Styles',
     refactor = ':twisted_rightwards_arrows: Code Refactoring',
-    perf = ':bangbang: Performance Improvements',
+    perf = ':zap: Performance Improvements',
     test = ':test_tube: Tests',
     build = ':hammer: Builds',
     ci = ':repeat: Continuous Integration',
@@ -37,7 +37,7 @@ enum ConventionalCommitTypes {
     revert = ':leftwards_arrow_with_hook: Reverts',
     remove = ':fire: Removals',
     security = ':lock: Security',
-    breaking = ':bomb: Breaking Changes',
+    breaking = ':boom: Breaking Changes',
     other = ':label: Other Changes',
     unknown = ':question: Unknown',
 }
@@ -147,7 +147,7 @@ export const generateChangelogFromParsedCommits = (parsedCommits: ParsedCommits[
         .map((val) => getFormattedChangelogEntry(val))
         .reduce((acc, line) => `${acc}\n${line}`, '');
     if (commits) {
-        changelog += '\n\n### Commits\n';
+        changelog += '\n\n### Other Commits\n';
         changelog += commits.trim();
     }
 
