@@ -12,12 +12,39 @@ Requires use of [semantic versioning](https://semver.org/) on tags
   run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
 
 - name: Create release
-  uses: mrwake-dev/release-changelog@v2.0.2
+  uses: mrwake-dev/release-changelog@v2
   with:
     token: ${{ secrets.GITHUB_TOKEN }}
     title: 'YOUR APP NAME ${{ steps.vars.outputs.tag }}'
     files: |
       LICENSE
+```
+
+## Supported sections
+- `feat`, `new` - 🚀 Features
+- `update` - 🔄 Updates
+- `fix` - 🔧 Bug Fixes
+- `docs` - 📝 Documentation
+- `styles` - 🎨 Styles
+- `refactor` - :twisted_rightwards_arrows: Code Refactoring
+- `perf` - ⚡️ Performance Improvements
+- `test` - 🧪 Tests
+- `build` - 🔨 Builds
+- `ci` - 🔁 Continuous Integration
+- `chore` - 🧹 Chores
+- `revert` - :leftwards_arrow_with_hook: Reverts
+- `remove` - 🔥 Removals
+- `security` - 🔒️ Security
+- `breaking` - 💥 Breaking Changes
+- `other` - 🏷️ Other Changes
+
+## Commit message format examples
+```yaml
+- new: Add new feature
+- update: Update feature
+- fix: Fix bug
+- styles(css): Change style
+- refactor(manager): Refactor code
 ```
 
 ## Arguments
