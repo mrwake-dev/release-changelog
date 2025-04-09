@@ -137,7 +137,7 @@ const getCommitsSinceRelease = async (
         core.info(
             `Successfully retrieved ${resp.data.commits.length} commits between ${previousReleaseRef} and ${currentSha}`,
         );
-        commits = resp.data.commits;
+        commits = resp.data.commits as components["schemas"]["commit"][];
 
     } catch (err) {
         // istanbul ignore next
