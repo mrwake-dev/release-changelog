@@ -24,7 +24,7 @@ inputs:
     description: If enabled, when a new non-prerelease tag is pushed, the changelog will be created between the pushed tag, and the last non-prerelease tag
     default: 'false'
 runs:
-  using: 'node20'
+  using: node24
   main: 'dist/main.js'
 branding:
   icon: check-circle
