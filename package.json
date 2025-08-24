@@ -9,15 +9,16 @@
     "lint": "eslint --ignore-pattern .gitignore"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "https://github.com/mrwake-dev/release-changelog"
   },
   "keywords": [
     "actions",
     "node",
-    "setup"
+    "setup",
+    "release",
+    "changelog"
   ],
-  "author": "Machine_Maker",
+  "author": "MrWake Dev @mrwake-dev",
   "license": "MIT",
   "engineStrict": true,
   "engines": {
