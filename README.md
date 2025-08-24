@@ -3,7 +3,7 @@
 Based on [automatic-releases](https://github.com/marvinpinto/actions/blob/master/packages/automatic-releases) with further changelog customizations.  
 Requires use of [semantic versioning](https://semver.org/) on tags
 
-> Required NodeJS in GitHub Action >=20
+> Required Node.js in GitHub Action >=20
 
 ## Usage
 ```yaml
@@ -70,3 +70,5 @@ Requires use of [semantic versioning](https://semver.org/) on tags
     required: false
     description: If enabled, when a new non-prerelease tag is pushed, the changelog will be created between the pushed tag, and the last non-prerelease tag
 ```
+
+Originally created by [MC-Machinations](https://github.com/MC-Machinations/auto-release-changelog)
