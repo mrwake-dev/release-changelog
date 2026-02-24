@@ -41,6 +41,6 @@
     "@types/semver": "^7.3.9",
     "encoding": "0.1.13",
     "js-yaml": "4.1.1",
-    "typescript": "4.5.5"
+    "typescript": "5.9.3"
   }
 }
